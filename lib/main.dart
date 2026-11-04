@@ -35,46 +35,48 @@ class App extends StatelessWidget {
             ]
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: const HeadingText("Group Overview"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: const Row(
-                children: [
-                  Expanded(
-                    child: MenuCard(amount: 12, item: "Active Tasks"),
-                  ),
-                  SizedBox(
-                    width: 10
-                  ),
-                  Expanded(
-                    child: MenuCard(amount: 8, item: "Tasks Completed"),
-                  ),
-                ]
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: const HeadingText("Group Overview"),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Row(
-                children: [
-                  Expanded(
-                    child: MenuCard(amount: 6, item: "Active Members"),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: MenuCard(amount: 18, item: "Total Members"),
-                  ),
-                ]
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: const Row(
+                  children: [
+                    Expanded(
+                      child: MenuCard(amount: 12, item: "Active Tasks"),
+                    ),
+                    SizedBox(
+                      width: 10
+                    ),
+                    Expanded(
+                      child: MenuCard(amount: 8, item: "Tasks Completed"),
+                    ),
+                  ]
+                ),
               ),
-            ),
-          ]
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: const Row(
+                  children: [
+                    Expanded(
+                      child: MenuCard(amount: 6, item: "Active Members"),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: MenuCard(amount: 18, item: "Total Members"),
+                    ),
+                  ]
+                ),
+              ),
+            ]
+          ),
         ),
       ),
     );
