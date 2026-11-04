@@ -1,0 +1,46 @@
+Git commands:
+
+Clone:
+git clone URL
+
+Check status:
+git status
+
+Stage everything:
+git add .
+
+Stage one file:
+git add FILE
+
+Commit:
+git commit -m "MESSAGE"
+
+Unstaging:
+git restore --staged FILE
+
+Push:
+git push
+
+Pull latest changes:
+git pull
+
+Create annotated tag:
+git tag -a v1.0.0 -m "MESSAGE"
+
+List tags:
+git tag
+
+Push tag:
+git push origin v1.0.0
+
+Push all tags:
+git push --tags
+
+Delete local tag:
+git tag -d v1.0.0
+
+Version formats:
+For developmental: vx.x.x.x-dev/patch.x
+For stable: vx.x.x.x
+Commit message: CTDS Development-x yyyy/mm/dd [time in 24h format]
+Commit message 2(for small commits): CTDS Development-x-[a-z] yyyy/mm/dd [time in 24h format]
