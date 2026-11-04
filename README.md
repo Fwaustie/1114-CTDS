@@ -10,4 +10,4 @@ Current features:
  - Two cards
  - Static element display
 
-*v1.0.0.0-dev.1*
+*v1.0.0.4*
