@@ -18,7 +18,7 @@ class App extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           backgroundColor: simboticsRed,
-          leading: Icon(Icons.menu),
+          leading: Icon(Icons.menu, color: Colors.white),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
