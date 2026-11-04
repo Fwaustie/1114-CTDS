@@ -46,4 +46,5 @@ Version formats:
 For developmental: vx.x.x.x-dev/patch.x
 For stable: vx.x.x.x
 Commit message: CTDS Development-x yyyy/mm/dd [time in 24h format]
+(Note: Development number is separated by day. If changes are made within the same day, separate by letter.)
 Commit message 2(for small commits): CTDS Development-x-[a-z] yyyy/mm/dd [time in 24h format]

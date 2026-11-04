@@ -58,6 +58,22 @@ class App extends StatelessWidget {
                 ]
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: const Row(
+                children: [
+                  Expanded(
+                    child: MenuCard(amount: 6, item: "Active Members"),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: MenuCard(amount: 18, item: "Total Members"),
+                  ),
+                ]
+              ),
+            ),
           ]
         ),
       ),
