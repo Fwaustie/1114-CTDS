@@ -25,13 +25,13 @@ Pull latest changes:
 git pull
 
 Create annotated tag:
-git tag -a v1.0.0 -m "MESSAGE"
+git tag -a vx.x.x.x -m "MESSAGE"
 
 List tags:
 git tag
 
 Push tag:
-git push origin v1.0.0
+git push origin vx.x.x.x
 
 Push all tags:
 git push --tags
