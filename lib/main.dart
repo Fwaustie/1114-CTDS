@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import './widgets/menucard.dart';
 import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
-import './inbox.dart';
 
 void main() {
   runApp(const App());
