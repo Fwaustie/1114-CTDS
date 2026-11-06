@@ -7,7 +7,7 @@ class Inbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 1,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: false,
@@ -31,13 +31,26 @@ class Inbox extends StatelessWidget {
           bottom: TabBar(
             labelColor: Colors.white,
             indicatorColor: Colors.white,
-            unselectedLabelColor: Colors.grey,
+            unselectedLabelColor: Colors.white,
             tabs: [
-              Tab(icon: Icon(Icons.inbox_outlined, color: Colors.white), text: "Inbox"),
+              Tab(icon: Icon(Icons.account_tree_outlined, color: Colors.white), text: "Branch"),
+              Tab(icon: Icon(Icons.language_outlined, color: Colors.white), text: "Geode"),
             ]
           ),
         ),
-        body: const SizedBox(),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                children: [
+                  
+                ]
+              ),
+            ]
+          ),
+        ),
       ),
     );
   }
