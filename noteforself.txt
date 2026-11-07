@@ -42,6 +42,12 @@ git push --tags
 Delete local tag:
 git tag -d v1.0.0
 
+Delete remote tag:
+git push origin --delete [NAME OF TAG]
+
+List all commits(from newest to oldest):
+git log
+
 Version formats:
 For developmental: vx.x.x.x-dev/patch.x
 For stable: vx.x.x.x
