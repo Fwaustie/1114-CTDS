@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import './widgets/menucard.dart';
+import './widgets/defaultcard.dart';
 import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
 import './inbox.dart';
+import './widgets/drawerhead.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Inbox(),
-  ));
+  runApp(App());
 }
 
 class App extends StatelessWidget {
@@ -22,7 +20,9 @@ class App extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           backgroundColor: simboticsRed,
-          leading: Icon(Icons.menu, color: Colors.white),
+          iconTheme: const IconThemeData(
+            color: Colors.white,
+          ),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -39,6 +39,33 @@ class App extends StatelessWidget {
             ]
           ),
         ),
+        drawer: Builder(
+          builder: (context) => Drawer(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                SimboticsDrawerHead(),
+                ListTile(
+                  leading: const Icon(Icons.dashboard),
+                  title: const Text("Dashboard"),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.inbox_outlined),
+                  title: const Text("Inbox"),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Inbox(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,33 +75,57 @@ class App extends StatelessWidget {
                 child: const HeadingText("Group Overview"),
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: const Row(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
                   children: [
                     Expanded(
-                      child: MenuCard(amount: 12, item: "Active Tasks"),
+                      child: DefaultCard(
+                        amount: 12,
+                        item: "Active Tasks",
+                        amountFontSize: 30,
+                        itemFontSize: 12.5,
+                        minHeightP: 90,
+                      ),
                     ),
                     SizedBox(
                       width: 10
                     ),
                     Expanded(
-                      child: MenuCard(amount: 8, item: "Tasks Completed"),
+                      child: DefaultCard(
+                        amount: 7,
+                        item: "Tasks Completed",
+                        amountFontSize: 30,
+                        itemFontSize: 12.5,
+                        minHeightP: 90,
+                      ),
                     ),
                   ]
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: const Row(
                   children: [
                     Expanded(
-                      child: MenuCard(amount: 6, item: "Active Members"),
+                      child: DefaultCard(
+                        amount: 3,
+                        item: "Active Members",
+                        amountFontSize: 30,
+                        itemFontSize: 12.5,
+                        minHeightP: 90,
+                      ),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Expanded(
-                      child: MenuCard(amount: 18, item: "Total Members"),
+                      child: DefaultCard(
+                        amount: 39,
+                        item: "Total Members",
+                        amountFontSize: 30,
+                        itemFontSize: 12.5,
+                        minHeightP: 90,
+                      ),
                     ),
                   ]
                 ),
