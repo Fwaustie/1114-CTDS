@@ -6,5 +6,6 @@ final List<String> testTasks = [
   "Replace intake roller",
   "Update scouting spreadsheet",
   "Test drive",
+  "Test drivetrain",
   "Review CAD revisions",
 ];
