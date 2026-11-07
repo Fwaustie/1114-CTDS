@@ -48,6 +48,9 @@ git push origin --delete [NAME OF TAG]
 List all commits(from newest to oldest):
 git log
 
+Show Commit and Tag info:
+git show [TAG NAME]
+
 Version formats:
 For developmental: vx.x.x.x-dev/patch.x
 For stable: vx.x.x.x
