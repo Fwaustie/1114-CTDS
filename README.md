@@ -5,9 +5,9 @@ An experimental task distribution and hierarchical management system designed to
 **More to come soon.**
 
 Current features:
- - AppBar
- - Main page
- - Two cards
- - Static element display
+ - Static element display(prototype phase)
+ - Inbox screen
+ - Dashboard screen
+ - Working screen navigation
 
-*v1.0.0.4*
+*v1.0.0.10*
