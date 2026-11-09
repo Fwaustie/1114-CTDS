@@ -4,6 +4,7 @@ import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
 import './inbox.dart';
 import './widgets/drawerhead.dart';
+import './widgets/progressbar.dart';
 
 void main() {
   runApp(App());
@@ -66,72 +67,124 @@ class App extends StatelessWidget {
             ),
           ),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: const HeadingText("Group Overview"),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: const HeadingText("Group Overview"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: DefaultCard(
+                      amount: 10002,
+                      item: "Active Tasks",
+                      amountFontSize: 30,
+                      itemFontSize: 12.5,
+                      minHeightP: 90,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10
+                  ),
+                  Expanded(
+                    child: DefaultCard(
+                      amount: 0,
+                      item: "Tasks Completed",
+                      amountFontSize: 30,
+                      itemFontSize: 12.5,
+                      minHeightP: 90,
+                    ),
+                  ),
+                ]
               ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: DefaultCard(
-                        amount: 12,
-                        item: "Active Tasks",
-                        amountFontSize: 30,
-                        itemFontSize: 12.5,
-                        minHeightP: 90,
-                      ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: const Row(
+                children: [
+                  Expanded(
+                    child: DefaultCard(
+                      amount: 3,
+                      item: "Active Members",
+                      amountFontSize: 30,
+                      itemFontSize: 12.5,
+                      minHeightP: 90,
                     ),
-                    SizedBox(
-                      width: 10
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: DefaultCard(
+                      amount: 39,
+                      item: "Total Members",
+                      amountFontSize: 30,
+                      itemFontSize: 12.5,
+                      minHeightP: 90,
                     ),
-                    Expanded(
-                      child: DefaultCard(
-                        amount: 7,
-                        item: "Tasks Completed",
-                        amountFontSize: 30,
-                        itemFontSize: 12.5,
-                        minHeightP: 90,
-                      ),
-                    ),
-                  ]
-                ),
+                  ),
+                ]
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: const Row(
-                  children: [
-                    Expanded(
-                      child: DefaultCard(
-                        amount: 3,
-                        item: "Active Members",
-                        amountFontSize: 30,
-                        itemFontSize: 12.5,
-                        minHeightP: 90,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: DefaultCard(
-                        amount: 39,
-                        item: "Total Members",
-                        amountFontSize: 30,
-                        itemFontSize: 12.5,
-                        minHeightP: 90,
-                      ),
-                    ),
-                  ]
-                ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: Divider(
+                color: simboticsLightGrey,
               ),
-            ]
-          ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  ProgressBar(
+                    branch: "Electrical",
+                    assignedtaskamt: 1,
+                    finishedtaskamt: 0,
+                    cryamt: 0,
+                    delayedtaskamt: 0,
+                    activemembersinbranch: 1,
+                    widthP: 200,
+                    valueP: 0.68479,
+                    minHeightP: 10.0,
+                    colorP: simboticsRed,
+                  ),
+                  ProgressBar(
+                    branch: "Manufacturing",
+                    assignedtaskamt: 2,
+                    finishedtaskamt: 0,
+                    cryamt: 1,
+                    delayedtaskamt: 0,
+                    activemembersinbranch: 1,
+                    widthP: 200,
+                    valueP: 0.17232,
+                    minHeightP: 10.0,
+                    colorP: simboticsRed,
+                  ),
+                  ProgressBar(
+                    branch: "Programming",
+                    assignedtaskamt: 9999,
+                    finishedtaskamt: 0,
+                    cryamt: 9999,
+                    delayedtaskamt: 9999,
+                    activemembersinbranch: 1,
+                    widthP: 200,
+                    valueP: 0.0,
+                    minHeightP: 10.0,
+                    colorP: simboticsRed,
+                  ),
+                ]
+              ),
+            ),
+          ]
         ),
       ),
     );
