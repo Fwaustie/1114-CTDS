@@ -17,6 +17,6 @@ final List<String> testTasks = [
   "Go touch grass",
   "What a no-life",
   "STOP SCROLLING",
-  "balls",
+  "there used to be something here that we dont talk about",
   "this was a scroll test :3",
 ];
