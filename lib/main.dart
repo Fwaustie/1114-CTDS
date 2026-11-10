@@ -5,6 +5,7 @@ import './widgets/headingtext.dart';
 import './inbox.dart';
 import './widgets/drawerhead.dart';
 import './widgets/progressbar.dart';
+import './teamforums.dart';
 
 void main() {
   runApp(App());
@@ -59,6 +60,19 @@ class App extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const Inbox(),
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.forum_outlined),
+                  title: const Text("Team Forums"),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TeamForums(),
                       ),
                     );
                   },
