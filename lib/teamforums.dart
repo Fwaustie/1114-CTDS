@@ -1,6 +1,10 @@
+
 import 'package:flutter/material.dart';
 import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
+import './main.dart';
+import './inbox.dart';
+import './widgets/drawerhead.dart';
 
 class TeamForums extends StatelessWidget {
   const TeamForums({super.key});
@@ -32,6 +36,46 @@ class TeamForums extends StatelessWidget {
                 fontStyle: FontStyle.italic,
                 color: Colors.white,
               ),
+            ),
+          ],
+        ),
+      ),
+
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            SimboticsDrawerHead(),
+            ListTile(
+              leading: const Icon(Icons.dashboard),
+              title: const Text("Dashboard"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const App(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.inbox_outlined),
+              title: const Text(""),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Inbox(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.forum_outlined),
+              title: const Text(""),
+              onTap: () {},
             ),
           ],
         ),

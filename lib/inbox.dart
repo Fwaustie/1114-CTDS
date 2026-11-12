@@ -4,6 +4,7 @@ import './widgets/defaultcard.dart';
 import './main.dart';
 import './widgets/drawerhead.dart';
 import './constants/test/premadeinboxtasklist.dart';
+import './teamforums.dart';
 
 class Inbox extends StatelessWidget {
   const Inbox({super.key});
@@ -68,6 +69,19 @@ class Inbox extends StatelessWidget {
                 title: const Text("Inbox"),
                 onTap: () {
                   Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.forum_outlined),
+                title: const Text("Team Forums"),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TeamForums(),
+                    ),
+                  );
                 },
               ),
             ],
