@@ -9,5 +9,6 @@ Current features:
  - Inbox screen
  - Dashboard screen
  - Working screen navigation
+ - Team Forums screen
 
 *v1.0.0.13*
