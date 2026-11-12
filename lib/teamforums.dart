@@ -61,7 +61,7 @@ class TeamForums extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.inbox_outlined),
-              title: const Text(""),
+              title: const Text("Inbox"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -74,7 +74,7 @@ class TeamForums extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.forum_outlined),
-              title: const Text(""),
+              title: const Text("Team Forums"),
               onTap: () {},
             ),
           ],

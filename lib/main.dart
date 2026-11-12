@@ -4,7 +4,7 @@ import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
 import './inbox.dart';
 import './widgets/drawerhead.dart';
-import './widgets/progressbar.dart';
+import 'widgets/dashboardprogressbar.dart';
 import './teamforums.dart';
 
 void main() {
