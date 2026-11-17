@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import './constants/colors/colorconstants.dart';
 import './widgets/headingtext.dart';
