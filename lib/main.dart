@@ -6,9 +6,13 @@ import './inbox.dart';
 import './widgets/drawerhead.dart';
 import 'widgets/dashboardprogressbar.dart';
 import './teamforums.dart';
+import './login.dart';
 
 void main() {
-  runApp(App());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Login()
+  ));
 }
 
 class App extends StatelessWidget {
