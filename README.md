@@ -10,5 +10,7 @@ Current features:
  - Dashboard screen
  - Working screen navigation
  - Team Forums screen
+ - Login screen(basic, wip)
+ - Account settings screen(wip)
 
-*v1.0.0.15*
+*v1.0.0.17*
