@@ -5,6 +5,7 @@ import './main.dart';
 import './widgets/drawerhead.dart';
 import './constants/test/premadeinboxtasklist.dart';
 import './teamforums.dart';
+import './widgets/accountbutton.dart';
 
 class Inbox extends StatelessWidget {
   const Inbox({super.key});
@@ -20,6 +21,13 @@ class Inbox extends StatelessWidget {
           iconTheme: const IconThemeData(
             color: Colors.white,
           ),
+          actions: [
+            Row(
+              children: [
+                AccountButton(),
+              ]
+            ),
+          ],
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,

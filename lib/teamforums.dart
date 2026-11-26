@@ -4,6 +4,7 @@ import './widgets/headingtext.dart';
 import './main.dart';
 import './inbox.dart';
 import './widgets/drawerhead.dart';
+import './widgets/accountbutton.dart';
 
 class TeamForums extends StatelessWidget {
   const TeamForums({super.key});
@@ -17,6 +18,13 @@ class TeamForums extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
+        actions: [
+          Row(
+            children: [
+              AccountButton(),
+            ]
+          ),
+        ],
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,

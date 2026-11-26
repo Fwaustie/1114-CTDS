@@ -7,6 +7,7 @@ import './widgets/drawerhead.dart';
 import 'widgets/dashboardprogressbar.dart';
 import './teamforums.dart';
 import './login.dart';
+import './widgets/accountbutton.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -44,6 +45,13 @@ class App extends StatelessWidget {
               )),
             ]
           ),
+          actions: [
+            Row(
+              children: [
+                AccountButton(),
+              ],
+            ),
+          ],
         ),
         drawer: Builder(
           builder: (context) => Drawer(
