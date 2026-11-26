@@ -20,7 +20,7 @@ class Login extends StatelessWidget {
               fit: BoxFit.contain,
             ),
             LoginHeadingText("Welcome Back!"),
-            const Text("Rubellite Software v1.0.0.15"),
+            const Text("Rubellite Software v1.0.0.17"),
             SizedBox(
               width: 250,
               child: Column(
